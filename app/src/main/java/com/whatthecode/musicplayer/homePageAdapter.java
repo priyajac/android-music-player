@@ -14,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 
 public class homePageAdapter extends FragmentPagerAdapter {
 
+    private String[] tabTitles = new String[]{"TRACKS","ALBUM","ARTIST","PLAYLIST"};
+
     public homePageAdapter(FragmentManager fm) {super(fm);}
 
     @Override
@@ -31,5 +33,10 @@ public class homePageAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return 4;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return tabTitles[position];
     }
 }
