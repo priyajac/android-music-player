@@ -7,7 +7,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tracks"
+        android:text="@string/playlists"
         android:textSize="48sp"/>
-
 </LinearLayout>
