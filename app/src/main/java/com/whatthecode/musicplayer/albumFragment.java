@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by Nipun Haldar on 6/8/2017.
+ * handels the fragment album
  */
 
 public class albumFragment extends Fragment {

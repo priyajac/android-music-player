@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.support.v4.app.Fragment;
 
 /**
- * Created by Nipun Haldar on 6/8/2017.
+ * handels the fragment tracks
  */
 
 public class trackFragment extends Fragment {
