@@ -1,32 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="7dp">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:background="@drawable/round_shape"
+    android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_width="47dp"
-        android:layout_height="47dp"
-        android:id="@+id/track_item_image"/>
+        android:id="@+id/track_item_image"
+        android:layout_margin="4dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/faded_art"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingLeft="8dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/track_item_title"
-            android:textSize="20sp"
-            android:layout_marginStart="3dp" />
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            tools:text="Faded"
+            android:textSize="20sp"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/track_item_artist"
-            android:textSize="12sp"
-            android:layout_marginStart="3dp"/>
+            android:textColor="@android:color/white"
+            android:maxLines="1"
+            tools:text="Alan Walker"
+            android:textSize="12sp"/>
 
     </LinearLayout>
 
