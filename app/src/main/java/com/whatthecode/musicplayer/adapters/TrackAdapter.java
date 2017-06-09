@@ -1,19 +1,19 @@
 package com.whatthecode.musicplayer.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.whatthecode.musicplayer.R;
 import com.whatthecode.musicplayer.models.Track;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
-/**
- * Created by Nipun Haldar on 6/8/2017.
- */
 
 public class TrackAdapter extends RecyclerView.Adapter<TrackAdapter.ItemHolder> {
 
@@ -27,22 +27,39 @@ public class TrackAdapter extends RecyclerView.Adapter<TrackAdapter.ItemHolder> 
 
     @Override
     public ItemHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_track, null);
+            ItemHolder ml = new ItemHolder(v);
+            return ml;
     }
 
     @Override
-    public void onBindViewHolder(ItemHolder holder, int position) {
+    public void onBindViewHolder(ItemHolder itemHolder, int i) {
+        Track localItem = tracks.get(i);
 
+        itemHolder.title.setText(localItem.title);
+        itemHolder.artist.setText(localItem.artistName);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return tracks != null ? tracks.size() : 0;
     }
 
-    public class ItemHolder extends RecyclerView.ViewHolder {
+    public class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        protected TextView title, artist;
+        protected ImageView albumArt;
+
         public ItemHolder(View itemView) {
             super(itemView);
+            this.title = (TextView) itemView.findViewById(R.id.track_item_title);
+            this.artist = (TextView) itemView.findViewById(R.id.track_item_artist);
+            this.albumArt = (ImageView) itemView.findViewById(R.id.track_item_image);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+
         }
     }
 }
