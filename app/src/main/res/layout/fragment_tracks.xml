@@ -1,38 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tool="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10sp">
 
-        <ImageView
-            android:id="@+id/album_art"
-            android:layout_width="47sp"
-            android:layout_height="47sp"
-            android:src="@drawable/faded_art"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="10sp">
-            <TextView
-                android:id="@+id/track_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tool:text="Faded"
-                android:textColor="@android:color/black"
-                android:textSize="24sp"/>
-
-            <TextView
-                android:id="@+id/artist_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tool:text="Alan Walker"
-                android:textColor="@android:color/black"
-                android:textSize="15sp"/>
-
-        </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:id="@+id/track_recyclerView" />
 
 </LinearLayout>
